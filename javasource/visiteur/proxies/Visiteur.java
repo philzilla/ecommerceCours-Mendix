@@ -22,7 +22,8 @@ public class Visiteur
 	{
 		Nom("Nom"),
 		Email("Email"),
-		MotDePasse("MotDePasse");
+		MotDePasse("MotDePasse"),
+		Genre("Genre");
 
 		private java.lang.String metaName;
 
@@ -182,6 +183,23 @@ public class Visiteur
 	}
 
 	/**
+	 * @return value of MotDePasse
+	 */
+	public final java.lang.String getMotDePasse()
+	{
+		return getMotDePasse(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of MotDePasse
+	 */
+	public final java.lang.String getMotDePasse(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.MotDePasse.toString());
+	}
+
+	/**
 	 * Set value of MotDePasse
 	 * @param motdepasse
 	 */
@@ -198,6 +216,50 @@ public class Visiteur
 	public final void setMotDePasse(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String motdepasse)
 	{
 		getMendixObject().setValue(context, MemberNames.MotDePasse.toString(), motdepasse);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param genre
+	 */
+	public final visiteur.proxies.Genre getGenre()
+	{
+		return getGenre(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Genre
+	 */
+	public final visiteur.proxies.Genre getGenre(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Genre.toString());
+		if (obj == null)
+			return null;
+
+		return visiteur.proxies.Genre.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param genre
+	 */
+	public final void setGenre(visiteur.proxies.Genre genre)
+	{
+		setGenre(getContext(), genre);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param context
+	 * @param genre
+	 */
+	public final void setGenre(com.mendix.systemwideinterfaces.core.IContext context, visiteur.proxies.Genre genre)
+	{
+		if (genre != null)
+			getMendixObject().setValue(context, MemberNames.Genre.toString(), genre.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Genre.toString(), null);
 	}
 
 	/**

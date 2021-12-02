@@ -21,4 +21,10 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("Visiteur.connexion").withParams(params).execute(context);
 		return result == null ? null : visiteur.proxies.Visiteur.initialize(context, result);
 	}
+	public static void inscription(IContext context, visiteur.proxies.Visiteur _visiteur)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Visiteur", _visiteur == null ? null : _visiteur.getMendixObject());
+		Core.microflowCall("Visiteur.inscription").withParams(params).execute(context);
+	}
 }

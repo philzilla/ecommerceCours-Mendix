@@ -19,6 +19,7 @@ public class Account extends system.proxies.User
 		FullName("FullName"),
 		Email("Email"),
 		IsLocalUser("IsLocalUser"),
+		Genre("Genre"),
 		Name("Name"),
 		Password("Password"),
 		LastLogin("LastLogin"),
@@ -195,6 +196,50 @@ public class Account extends system.proxies.User
 	public final void setIsLocalUser(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean islocaluser)
 	{
 		getMendixObject().setValue(context, MemberNames.IsLocalUser.toString(), islocaluser);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param genre
+	 */
+	public final visiteur.proxies.Genre getGenre()
+	{
+		return getGenre(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Genre
+	 */
+	public final visiteur.proxies.Genre getGenre(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Genre.toString());
+		if (obj == null)
+			return null;
+
+		return visiteur.proxies.Genre.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param genre
+	 */
+	public final void setGenre(visiteur.proxies.Genre genre)
+	{
+		setGenre(getContext(), genre);
+	}
+
+	/**
+	 * Set value of Genre
+	 * @param context
+	 * @param genre
+	 */
+	public final void setGenre(com.mendix.systemwideinterfaces.core.IContext context, visiteur.proxies.Genre genre)
+	{
+		if (genre != null)
+			getMendixObject().setValue(context, MemberNames.Genre.toString(), genre.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Genre.toString(), null);
 	}
 
 	@java.lang.Override

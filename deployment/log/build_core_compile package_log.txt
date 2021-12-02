@@ -1,7 +1,7 @@
 Buildfile: C:\Users\Serveur\Documents\Mendix\ecommerceCours-main\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 3 source files to C:\Users\Serveur\Documents\Mendix\ecommerceCours-main\deployment\run\bin
+    [javac] Compiling 5 source files to C:\Users\Serveur\Documents\Mendix\ecommerceCours-main\deployment\run\bin
     [javac] Note: C:\Users\Serveur\Documents\Mendix\ecommerceCours-main\javasource\system\UserActionsRegistrar.java uses or overrides a deprecated API.
     [javac] Note: Recompile with -Xlint:deprecation for details.
 
