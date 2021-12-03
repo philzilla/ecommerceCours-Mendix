@@ -10,19 +10,15 @@
       "Name": "Administrator",
       "ManageableRoles": [
         "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-        "daee26ff-b2ea-4c3f-b459-ad80eb6566c3"
-      ]
-    },
-    "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
-      "Name": "User",
-      "ManageableRoles": [
-        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-        "daee26ff-b2ea-4c3f-b459-ad80eb6566c3"
+        "daee26ff-b2ea-4c3f-b459-ad80eb6566c3",
+        "e6f14ca3-5340-40fd-8572-b04fa532d299"
       ]
     },
     "daee26ff-b2ea-4c3f-b459-ad80eb6566c3": {
       "Name": "Visiteur"
+    },
+    "e6f14ca3-5340-40fd-8572-b04fa532d299": {
+      "Name": "Employe"
     }
   },
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",

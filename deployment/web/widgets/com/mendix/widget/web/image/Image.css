@@ -1,0 +1,45 @@
+.mx-image-viewer {
+  height: 100%;
+  width: 100%;
+}
+
+.mx-image-viewer-responsive img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.mx-image-viewer-lightbox-backdrop {
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  inset: 0px;
+}
+.mx-image-viewer-lightbox-backdrop .close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  display: flex;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.mx-image-viewer-lightbox-backdrop .close-button .removeIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.mx-image-viewer-lightbox {
+  z-index: 210;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mx-image-viewer.mx-image-background {
+  background-repeat: no-repeat;
+  background-position: center;
+}
