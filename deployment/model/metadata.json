@@ -15,7 +15,11 @@
       ]
     },
     "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
-      "Name": "User"
+      "Name": "User",
+      "ManageableRoles": [
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+        "daee26ff-b2ea-4c3f-b459-ad80eb6566c3"
+      ]
     },
     "daee26ff-b2ea-4c3f-b459-ad80eb6566c3": {
       "Name": "Visiteur"
