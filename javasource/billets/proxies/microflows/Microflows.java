@@ -15,6 +15,13 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the Billets module
+	public static void acheterUnBillet(IContext context, billets.proxies.Billet _billet, billets.proxies.Panier _panier)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Billet", _billet == null ? null : _billet.getMendixObject());
+		params.put("Panier", _panier == null ? null : _panier.getMendixObject());
+		Core.microflowCall("Billets.AcheterUnBillet").withParams(params).execute(context);
+	}
 	public static void ajouterProduitDansPanier(IContext context, billets.proxies.Billet _billet, billets.proxies.Panier _panier)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -22,17 +29,17 @@ public class Microflows
 		params.put("Panier", _panier == null ? null : _panier.getMendixObject());
 		Core.microflowCall("Billets.AjouterProduitDansPanier").withParams(params).execute(context);
 	}
-	public static billets.proxies.Panier ajoutPanier(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		IMendixObject result = (IMendixObject)Core.microflowCall("Billets.AjoutPanier").withParams(params).execute(context);
-		return result == null ? null : billets.proxies.Panier.initialize(context, result);
-	}
 	public static java.math.BigDecimal calculTVA(IContext context, billets.proxies.Billet _entity)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Entity", _entity == null ? null : _entity.getMendixObject());
 		return (java.math.BigDecimal) Core.microflowCall("Billets.CalculTVA").withParams(params).execute(context);
+	}
+	public static billets.proxies.Panier creerObjectPanier(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("Billets.CreerObjectPanier").withParams(params).execute(context);
+		return result == null ? null : billets.proxies.Panier.initialize(context, result);
 	}
 	public static void crerUneComande(IContext context)
 	{

@@ -21,7 +21,8 @@ public class Panier
 	public enum MemberNames
 	{
 		titreBillet("titreBillet"),
-		Panier_Billet("Billets.Panier_Billet");
+		Panier_Billet("Billets.Panier_Billet"),
+		Panier_Billet_2("Billets.Panier_Billet_2");
 
 		private java.lang.String metaName;
 
@@ -185,6 +186,52 @@ public class Panier
 			getMendixObject().setValue(context, MemberNames.Panier_Billet.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.Panier_Billet.toString(), panier_billet.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Panier_Billet_2
+	 */
+	public final java.util.List<billets.proxies.Billet> getPanier_Billet_2() throws com.mendix.core.CoreException
+	{
+		return getPanier_Billet_2(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Panier_Billet_2
+	 */
+	@SuppressWarnings("unchecked")
+	public final java.util.List<billets.proxies.Billet> getPanier_Billet_2(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		java.util.List<billets.proxies.Billet> result = new java.util.ArrayList<billets.proxies.Billet>();
+		Object valueObject = getMendixObject().getValue(context, MemberNames.Panier_Billet_2.toString());
+		if (valueObject == null)
+			return result;
+		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject))
+			result.add(billets.proxies.Billet.initialize(context, mendixObject));
+		return result;
+	}
+
+	/**
+	 * Set value of Panier_Billet_2
+	 * @param panier_billet_2
+	 */
+	public final void setPanier_Billet_2(java.util.List<billets.proxies.Billet> panier_billet_2)
+	{
+		setPanier_Billet_2(getContext(), panier_billet_2);
+	}
+
+	/**
+	 * Set value of Panier_Billet_2
+	 * @param context
+	 * @param panier_billet_2
+	 */
+	public final void setPanier_Billet_2(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<billets.proxies.Billet> panier_billet_2)
+	{
+		java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier> identifiers = new java.util.ArrayList<com.mendix.systemwideinterfaces.core.IMendixIdentifier>();
+		for (billets.proxies.Billet proxyObject : panier_billet_2)
+			identifiers.add(proxyObject.getMendixObject().getId());
+		getMendixObject().setValue(context, MemberNames.Panier_Billet_2.toString(), identifiers);
 	}
 
 	/**
