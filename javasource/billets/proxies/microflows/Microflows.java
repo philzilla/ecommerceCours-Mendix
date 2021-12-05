@@ -10,10 +10,24 @@ import com.mendix.core.Core;
 import com.mendix.core.CoreException;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
 	// These are the microflows for the Billets module
+	public static void ajouterProduitDansPanier(IContext context, billets.proxies.Billet _billet, billets.proxies.Panier _panier)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Billet", _billet == null ? null : _billet.getMendixObject());
+		params.put("Panier", _panier == null ? null : _panier.getMendixObject());
+		Core.microflowCall("Billets.AjouterProduitDansPanier").withParams(params).execute(context);
+	}
+	public static billets.proxies.Panier ajoutPanier(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("Billets.AjoutPanier").withParams(params).execute(context);
+		return result == null ? null : billets.proxies.Panier.initialize(context, result);
+	}
 	public static java.math.BigDecimal calculTVA(IContext context, billets.proxies.Billet _entity)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

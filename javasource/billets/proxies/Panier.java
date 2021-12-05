@@ -20,6 +20,7 @@ public class Panier
 	 */
 	public enum MemberNames
 	{
+		titreBillet("titreBillet"),
 		Panier_Billet("Billets.Panier_Billet");
 
 		private java.lang.String metaName;
@@ -107,6 +108,42 @@ public class Panier
 	{
 		com.mendix.core.Core.delete(context, getMendixObject());
 	}
+	/**
+	 * @return value of titreBillet
+	 */
+	public final java.lang.String gettitreBillet()
+	{
+		return gettitreBillet(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of titreBillet
+	 */
+	public final java.lang.String gettitreBillet(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.titreBillet.toString());
+	}
+
+	/**
+	 * Set value of titreBillet
+	 * @param titrebillet
+	 */
+	public final void settitreBillet(java.lang.String titrebillet)
+	{
+		settitreBillet(getContext(), titrebillet);
+	}
+
+	/**
+	 * Set value of titreBillet
+	 * @param context
+	 * @param titrebillet
+	 */
+	public final void settitreBillet(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String titrebillet)
+	{
+		getMendixObject().setValue(context, MemberNames.titreBillet.toString(), titrebillet);
+	}
+
 	/**
 	 * @return value of Panier_Billet
 	 */
