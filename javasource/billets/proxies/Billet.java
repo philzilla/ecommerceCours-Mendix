@@ -25,7 +25,8 @@ public class Billet
 		PrixHT("PrixHT"),
 		TTC("TTC"),
 		IdProduct("IdProduct"),
-		Affiche("Affiche");
+		Affiche("Affiche"),
+		NombreBillet("NombreBillet");
 
 		private java.lang.String metaName;
 
@@ -334,6 +335,42 @@ public class Billet
 	public final void setAffiche(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String affiche)
 	{
 		getMendixObject().setValue(context, MemberNames.Affiche.toString(), affiche);
+	}
+
+	/**
+	 * @return value of NombreBillet
+	 */
+	public final java.lang.Integer getNombreBillet()
+	{
+		return getNombreBillet(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of NombreBillet
+	 */
+	public final java.lang.Integer getNombreBillet(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.NombreBillet.toString());
+	}
+
+	/**
+	 * Set value of NombreBillet
+	 * @param nombrebillet
+	 */
+	public final void setNombreBillet(java.lang.Integer nombrebillet)
+	{
+		setNombreBillet(getContext(), nombrebillet);
+	}
+
+	/**
+	 * Set value of NombreBillet
+	 * @param context
+	 * @param nombrebillet
+	 */
+	public final void setNombreBillet(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer nombrebillet)
+	{
+		getMendixObject().setValue(context, MemberNames.NombreBillet.toString(), nombrebillet);
 	}
 
 	/**
