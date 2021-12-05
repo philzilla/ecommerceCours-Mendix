@@ -21,6 +21,7 @@ public class Commande
 	public enum MemberNames
 	{
 		IdCommande("IdCommande"),
+		NumeroCommande("NumeroCommande"),
 		Commande_Billet("Billets.Commande_Billet");
 
 		private java.lang.String metaName;
@@ -150,6 +151,42 @@ public class Commande
 	public final void setIdCommande(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long idcommande)
 	{
 		getMendixObject().setValue(context, MemberNames.IdCommande.toString(), idcommande);
+	}
+
+	/**
+	 * @return value of NumeroCommande
+	 */
+	public final java.lang.String getNumeroCommande()
+	{
+		return getNumeroCommande(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of NumeroCommande
+	 */
+	public final java.lang.String getNumeroCommande(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.NumeroCommande.toString());
+	}
+
+	/**
+	 * Set value of NumeroCommande
+	 * @param numerocommande
+	 */
+	public final void setNumeroCommande(java.lang.String numerocommande)
+	{
+		setNumeroCommande(getContext(), numerocommande);
+	}
+
+	/**
+	 * Set value of NumeroCommande
+	 * @param context
+	 * @param numerocommande
+	 */
+	public final void setNumeroCommande(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String numerocommande)
+	{
+		getMendixObject().setValue(context, MemberNames.NumeroCommande.toString(), numerocommande);
 	}
 
 	/**

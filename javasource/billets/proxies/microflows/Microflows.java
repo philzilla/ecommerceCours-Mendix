@@ -20,4 +20,9 @@ public class Microflows
 		params.put("Entity", _entity == null ? null : _entity.getMendixObject());
 		return (java.math.BigDecimal) Core.microflowCall("Billets.CalculTVA").withParams(params).execute(context);
 	}
+	public static void crerUneComande(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("Billets.CrerUneComande").withParams(params).execute(context);
+	}
 }
